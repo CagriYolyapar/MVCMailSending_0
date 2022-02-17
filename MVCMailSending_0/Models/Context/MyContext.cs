@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCMailSending_0.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace MVCMailSending_0.Models.Context
         {
 
         }
+        public DbSet<AppUser> AppUsers { get; set; }
     }
 }

@@ -28,6 +28,7 @@ namespace MVCMailSending_0.Controllers
         [HttpPost]
         public ActionResult Register(AppUser appUser)
         {
+           
             MailService.Send(appUser.Email, body: "Hello World!!", subject: ":)");
             ViewBag.Message = "Mail basarılı bir şekilde gönderilmiştir";
             return View();
