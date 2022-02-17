@@ -1,0 +1,31 @@
+﻿@model MailSendVM
+@{
+    ViewBag.Title = "Register";
+}
+
+@ViewBag.Message
+
+
+<style>
+    .field-validation-error{
+        color:red;
+    }
+</style>
+
+@using(Html.BeginForm())
+            {
+                <div>
+                    @Html.TextBoxFor(x=>x.AppUser.UserName) 
+                    
+                </div>
+                <br />
+                <div>
+                    @Html.TextBoxFor(x=>x.AppUser.Email) <br />
+                    @Html.ValidationMessageFor(x=>x.AppUser.Email)
+                </div>
+
+                <div>
+                    <button class="btn btn-primary">Register</button>
+                </div>
+            }
+
